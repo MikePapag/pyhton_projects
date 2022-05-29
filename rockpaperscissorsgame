@@ -1,0 +1,16 @@
+import random
+
+comp_choices = ["r","s","p"]
+
+def win(pChoice,cChoice):
+    if (pChoice == "r" and cChoice == "s") or (pChoice == "p" and cChoice == "r") or (pChoice == "s" and cChoice == "p"):
+        return "You Won!"
+    elif pChoice== cChoice:
+        return "It's a Tie"
+    else:
+        return "You Lost"
+
+computer = random.choice(comp_choices)
+player = input("Choose 'r' for rock 'p' for paper or 's' for scissors")
+
+print(win(player,computer))
